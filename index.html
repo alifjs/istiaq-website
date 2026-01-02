@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CleanHome Finland | Premium Home Cleaning</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+  --primary: #2563eb;
+  --secondary: #22c55e;
+  --dark: #0f172a;
+  --light: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--light);
+  color: var(--dark);
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  background: radial-gradient(circle at top, #3b82f6, #1e40af);
+  color: white;
+  padding: 90px 20px 120px;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  background: var(--light);
+  transform: skewY(-4deg);
+}
+
+.hero-content {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: auto;
+  opacity: 0.95;
+}
+
+.hero .cta {
+  margin-top: 35px;
+  display: inline-block;
+  padding: 16px 36px;
+  background: var(--secondary);
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* STATS */
+.stats {
+  max-width: 1000px;
+  margin: -60px auto 80px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.stat {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  animation: float 4s ease-in-out infinite;
+}
+
+.stat:nth-child(2) { animation-delay: .5s; }
+.stat:nth-child(3) { animation-delay: 1s; }
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.stat h3 {
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+/* SERVICES */
+.section {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.service {
+  background: white;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  transition: transform .3s;
+}
+
+.service:hover {
+  transform: translateY(-10px);
+}
+
+.icon {
+  font-size: 2.5rem;
+}
+
+/* BOOKING */
+.booking {
+  background: linear-gradient(135deg, #eef2ff, #f0fdf4);
+  padding: 80px 20px;
+}
+
+.card {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  border-radius: 22px;
+  padding: 40px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.1);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+select, input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.price-box {
+  margin-top: 30px;
+  background: var(--dark);
+  color: white;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 18px;
+  font-size: 1.1rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.testimonial {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.07);
+}
+
+/* FOOTER */
+footer {
+  background: var(--dark);
+  color: #cbd5f5;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 80px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Premium Home Cleaning in Finland</h1>
+    <p>Book trusted, professional cleaners in minutes. Transparent pricing. No contracts.</p>
+    <a href="#booking" class="cta">Book Cleaning</a>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><h3>1,200+</h3><p>Homes Cleaned</p></div>
+  <div class="stat"><h3>4.9★</h3><p>Customer Rating</p></div>
+  <div class="stat"><h3>100%</h3><p>Satisfaction</p></div>
+</div>
+
+<!-- SERVICES -->
+<div class="section">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service"><div class="icon">🏠</div><h3>Home Cleaning</h3><p>Weekly, bi-weekly or one-time professional cleaning.</p></div>
+    <div class="service"><div class="icon">🧽</div><h3>Deep Cleaning</h3><p>Extra attention to kitchens, bathrooms and surfaces.</p></div>
+    <div class="service"><div class="icon">🚚</div><h3>Move-Out Cleaning</h3><p>Perfect for apartment inspections and moving days.</p></div>
+  </div>
+</div>
+
+<!-- BOOKING -->
+<section class="booking" id="booking">
+  <h2 style="text-align:center;">Instant Price Calculator</h2>
+
+  <div class="card">
+    <div class="grid">
+      <div>
+        <label>Rooms</label>
+        <select id="rooms">
+          <option value="1">1 room</option>
+          <option value="2">2 rooms</option>
+          <option value="3">3 rooms</option>
+          <option value="4">4 rooms</option>
+          <option value="5">5+ rooms</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Service</label>
+        <select id="type">
+          <option value="standard">Standard</option>
+          <option value="deep">Deep</option>
+          <option value="moveout">Move-out</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Date</label>
+        <input type="date">
+      </div>
+
+      <div>
+        <label>Time</label>
+        <input type="time">
+      </div>
+    </div>
+
+    <div class="price-box">
+      <div>Total Price</div>
+      <div class="price">€<span id="price">59</span></div>
+      <small>VAT included · Demo pricing</small>
+    </div>
+
+    <button onclick="bookDemo()">Confirm Booking</button>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<div class="section">
+  <h2>What Customers Say</h2>
+  <div class="testimonials">
+    <div class="testimonial">“Absolutely spotless! Very professional.” – Anna, Helsinki</div>
+    <div class="testimonial">“Perfect move-out cleaning. Highly recommended.” – Mika, Espoo</div>
+    <div class="testimonial">“Easy booking and clear pricing.” – Laura, Vantaa</div>
+  </div>
+</div>
+
+<footer>
+  © 2026 CleanHome Finland · Demo Website
+</footer>
+
+<script>
+const rooms = document.getElementById("rooms");
+const type = document.getElementById("type");
+const priceEl = document.getElementById("price");
+
+function updatePrice() {
+  let r = parseInt(rooms.value);
+  let base = 39;
+  let roomCost = r * 22;
+  let extra = type.value === "deep" ? 35 : type.value === "moveout" ? 55 : 0;
+  priceEl.textContent = base + roomCost + extra;
+}
+
+rooms.addEventListener("change", updatePrice);
+type.addEventListener("change", updatePrice);
+
+function bookDemo() {
+  alert("Booking received!\n\nThis is a demo website.\nPayments will be added later.");
+}
+
+updatePrice();
+</script>
+
+</body>
+</html>
